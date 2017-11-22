@@ -1,3 +1,6 @@
-<p>
-  food-display works!
-</p>
+<div *ngFor="let currentInput of childFoodDisplay">
+  <p>Name:{{currentInput.foodName}}</p>
+  <p>details:{{currentInput.description}}</p>
+  <p>calories:{{currentInput.calories}}</p>
+  <button >Edit</button>
+</div>

@@ -6,12 +6,12 @@
 <div class="row">
   <div class="col-lg-6">
     <div class="well">
-      <app-food-form></app-food-form>
+      <app-food-form (newInputSender)= "newInput($event)"></app-food-form>
     </div>
   </div>
   <div class="col-lg-6">
     <div class="well">
-      <app-food-display></app-food-display>
+      <app-food-display [childFoodDisplay]="masterFoodDisplay"></app-food-display>
     </div>
   </div>
 </div>
