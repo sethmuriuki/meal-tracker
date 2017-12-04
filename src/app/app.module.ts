@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FoodFormComponent } from './food-form/food-form.component';
 import { FoodDisplayComponent } from './food-display/food-display.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import { MealpipePipe } from './mealpipe.pipe';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     AppComponent,
     FoodFormComponent,
     FoodDisplayComponent,
-    EditFormComponent
+    EditFormComponent,
+    MealpipePipe
   ],
   imports: [
     BrowserModule,
