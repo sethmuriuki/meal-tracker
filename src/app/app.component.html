@@ -11,7 +11,7 @@
     </div>
     <div class="col-lg-6">
         <div class="well">
-            <app-food-display [childFoodDisplay]="masterFoodDisplay" (clickSender)="showDetails($event)"></app-food-display>
+            <app-food-display [childFoodDisplay]="masterFoodDisplay" (clickSender)="showDetails($event)" (deleteMeal)="delete($event)"></app-food-display>
         </div>
     </div>
 </div>

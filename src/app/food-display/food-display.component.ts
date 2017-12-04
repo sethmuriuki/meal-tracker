@@ -8,8 +8,13 @@ import { Details } from '../details';
 export class FoodDisplayComponent {
   @Input() childFoodDisplay: Details[];
   @Output() clickSender = new EventEmitter();
+  @Output() deleteMeal = new EventEmitter();
 
   editButton(editMeal: Details) {
     this.clickSender.emit(editMeal);
+  }
+   
+  deleteButton(deletedMeal: Details) {
+    this.deleteMeal.emit(deletedMeal);
   }
 }

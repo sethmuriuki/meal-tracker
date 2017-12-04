@@ -21,6 +21,11 @@ export class AppComponent {
     this.newSelect = null;
   }
 
+  delete(mealToDelete: Details) {
+    const delMeal: number = this.masterFoodDisplay.indexOf(mealToDelete);
+    this.masterFoodDisplay.splice(delMeal, 1);
+  }
+
   // showEdit() {
   //   this.childSelect = true;
   // }
