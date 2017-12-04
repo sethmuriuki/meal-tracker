@@ -1,7 +1,10 @@
-<label> Food Name </label>
-<input type="text" name="" value="" placeholder="meal name" #foodName><br>
-<label> Description </label>
-<input type="text" name="" value="" placeholder="description" #description><br>
-<label> calories  </label>
-<input type="text" name="" value="" placeholder="calories" #calories><br>
-<button (click)="addNewFood(foodName.value, description.value, calories.value)">Edit Details</button>
+<div *ngIf=childSelect>
+
+    <label> Food Name </label>
+    <input [(ngModel)]="childSelect.foodName" placeholder="meal name"><br>
+    <label> Description </label>
+    <input [(ngModel)]="childSelect.description" placeholder="description"><br>
+    <label> calories  </label>
+    <input [(ngModel)]="childSelect.calories" placeholder="calories"><br>
+    <button (click)="finishedEditing()">SAVE</button>
+</div>

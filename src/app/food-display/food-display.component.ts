@@ -1,17 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
-import{ Details}  from "../details";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Details } from '../details';
 @Component({
   selector: 'app-food-display',
   templateUrl: './food-display.component.html',
   styleUrls: ['./food-display.component.css']
 })
-export class FoodDisplayComponent implements OnInit {
-  @Input()childFoodDisplay: Details[];
+export class FoodDisplayComponent {
+  @Input() childFoodDisplay: Details[];
+  @Output() clickSender = new EventEmitter();
 
-
-  constructor() { }
-
-  ngOnInit() {
+  editButton(editMeal: Details) {
+    this.clickSender.emit(editMeal);
   }
-
 }
