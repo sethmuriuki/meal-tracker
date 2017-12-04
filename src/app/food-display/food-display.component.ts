@@ -10,6 +10,11 @@ export class FoodDisplayComponent {
   @Output() clickSender = new EventEmitter();
   @Output() deleteMeal = new EventEmitter();
 
+  public selectCalorie: String = 'all';
+  onChange(option) {
+    this.selectCalorie = option;
+  }
+
   editButton(editMeal: Details) {
     this.clickSender.emit(editMeal);
   }
@@ -17,4 +22,5 @@ export class FoodDisplayComponent {
   deleteButton(deletedMeal: Details) {
     this.deleteMeal.emit(deletedMeal);
   }
+
 }
