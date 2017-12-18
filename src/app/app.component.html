@@ -1,19 +1,24 @@
-<div class="container">
-    <div class="head">
-        <h1>{{title}}</h1>
-    </div>
+<div class="head">
+    <h1>{{title}}</h1>
 </div>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="well">
-            <app-food-form (newInputSender)="newInput($event)"></app-food-form>
+<div id="input-display">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="well">
+                <app-food-form (newInputSender)="newInput($event)"></app-food-form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="well">
+                <app-food-display [childFoodDisplay]="masterFoodDisplay" (clickSender)="showDetails($event)" (deleteMeal)="delete($event)"></app-food-display>
+            </div>
         </div>
     </div>
-    <div class="col-lg-6">
-        <div class="well">
-            <app-food-display [childFoodDisplay]="masterFoodDisplay" (clickSender)="showDetails($event)" (deleteMeal)="delete($event)"></app-food-display>
-        </div>
+    <div class="form-edit">
+        <app-edit-form (clickNewSender)="finishedEdit()" [childSelect]="newSelect"></app-edit-form>
     </div>
 </div>
-
-<app-edit-form (clickNewSender)="finishedEdit()" [childSelect]="newSelect"></app-edit-form>
+<footer>
+    <h5>copyright:MIT</h5>
+    <h5>By:Seth Muriuki</h5>
+</footer>

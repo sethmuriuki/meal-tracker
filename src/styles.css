@@ -1,1 +1,22 @@
+.head {
+    background-color: rgb(255, 143, 52);
+    text-align: center;
+    padding: 30px;
+}
 
+#input-display {
+    background-image: url(/assets/images/bread_pastries_many_76629_1920x1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(44, 51, 3);
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(255, 143, 52);
+    padding-bottom: 50px;
+    font-weight: bold;
+}
