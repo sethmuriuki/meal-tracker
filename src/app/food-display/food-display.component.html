@@ -1,13 +1,15 @@
-<select (change)="onChange($event.target.value)">
+<div class="display">
+    <select (change)="onChange($event.target.value)">
     <option value="all" selected="selected">All</option>
     <option value="under500" >under500 calories</option>
     <option value="over500">over500 calories</option>
     
 </select>
-<div *ngFor="let currentInput of childFoodDisplay | mealpipe : selectCalorie">
-    <p>Name:{{currentInput.foodName}}</p>
-    <p>details:{{currentInput.description}}</p>
-    <p>calories:{{currentInput.calories}}</p>
-    <button (click)="editButton(currentInput)">Edit</button>
-    <button (click)="deleteButton(currentInput)">Delete</button>
+    <div *ngFor="let currentInput of childFoodDisplay | mealpipe : selectCalorie">
+        <p>Name:{{currentInput.foodName}}</p>
+        <p>details:{{currentInput.description}}</p>
+        <p>calories:{{currentInput.calories}}</p>
+        <button (click)="editButton(currentInput)">Edit</button>
+        <button (click)="deleteButton(currentInput)">Delete</button>
+    </div>
 </div>

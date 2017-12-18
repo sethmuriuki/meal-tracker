@@ -1,10 +1,12 @@
-<div *ngIf=childSelect>
+<div class="edit">
+    <div *ngIf=childSelect>
 
-    <label> Food Name </label>
-    <input [(ngModel)]="childSelect.foodName" placeholder="meal name"><br>
-    <label> Description </label>
-    <input [(ngModel)]="childSelect.description" placeholder="description"><br>
-    <label> calories  </label>
-    <input [(ngModel)]="childSelect.calories" placeholder="calories"><br>
-    <button (click)="finishedEditing()">SAVE</button>
+        <label> Food Name </label>
+        <input [(ngModel)]="childSelect.foodName" placeholder="meal name"><br>
+        <label> Description </label>
+        <input [(ngModel)]="childSelect.description" placeholder="description"><br>
+        <label> calories  </label>
+        <input [(ngModel)]="childSelect.calories" placeholder="calories"><br>
+        <button (click)="finishedEditing()">SAVE</button>
+    </div>
 </div>
